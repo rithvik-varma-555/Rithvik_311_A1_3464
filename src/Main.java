@@ -13,7 +13,7 @@ class Main {
             Point[] v = new Point[3];
 
             for (int j = 0; j < 3; j++) {
-                System.out.println("Vertix " + (j + 1) + " X and Y: ");
+                System.out.println("Vertix " + (j + 1) + " (X and Y): ");
                 double x = input.nextDouble();
                 double y = input.nextDouble();
                 v[j] = new Point(x, y);
@@ -29,14 +29,16 @@ class Main {
             String classification = triangle.classifyTriangle();
 
             System.out.println("Triangle "+ (i + 1) + " , Perimeter: "+ perimeter + " , Area: "+area+" ,Type: " + classification);
+
+            System.out.println("Please enter the coordinates to see if the point is inside Triangle"+(i + 1));
             double x = input.nextDouble();
             double y = input.nextDouble();
             Point point = new Point(x, y);
 
             if (triangle.isPointInside(point)) {
-                System.out.println("The point is inside the triangle.");
+                System.out.println("The point is inside the triangle "+(i + 1));
             } else {
-                System.out.println("The point is outside the triangle");
+                System.out.println("The point is outside the triangle "+(i + 1));
             }
         }
 
