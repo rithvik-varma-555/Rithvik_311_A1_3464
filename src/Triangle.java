@@ -31,6 +31,20 @@ class Triangle {
        return totalArea == (a1 + a2 + a3);
    }
 
+   public String classifyTriangle() {
+       double s1 = v[0].distance(v[1]);
+       double s2 = v[1].distance(v[2]);
+       double s3 = v[2].distance(v[0]);
+
+       if (s1 == s2 && s2 == s3) {
+           return "Equilateral";
+       } else if (s1 == s2 || s2 == s3 || s3 == s1) {
+           return "Isosceles";
+       } else {
+           return "Unknown";
+       }
+   }
+
 
 
 
