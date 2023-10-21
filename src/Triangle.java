@@ -22,6 +22,15 @@ class Triangle {
        return  Math.sqrt(s * (s - s1) * (s - s2) * (s - s3));
    }
 
+   public boolean isPointInside(Point point) {
+       double totalArea = calculateArea();
+       double a1 = new Triangle(point, v[1], v[2]).calculateArea();
+       double a2 = new Triangle(v[0], point, v[2]).calculateArea();
+       double a3 = new Triangle(v[0], v[1], point).calculateArea();
+
+       return totalArea == (a1 + a2 + a3);
+   }
+
 
 
 
