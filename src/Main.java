@@ -9,7 +9,7 @@ class Main {
         Triangle[] triangles = new Triangle[numOfTriangles];
 
         for (int i = 0; i < numOfTriangles; i++) {
-            System.out.println("Enter the coordinates of the triangle " + (i + 1));
+            System.out.println("Enter the coordinates of the triangle  " + (i + 1));
             Point[] v = new Point[3];
 
             for (int j = 0; j < 3; j++) {
